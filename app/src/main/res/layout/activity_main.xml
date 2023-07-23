@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_marginTop="0dp"
+        android:background="@color/purple_500"
+        android:id="@+id/toolbar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:text="Real Time Language Translator"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textColor="@color/white">
+
+
+            </TextView>
+
+
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/language_selector"
+        android:layout_marginStart="20dp"
+        android:layout_below="@id/toolbar"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="40dp">
+
+        <Spinner
+            android:id="@+id/spinnerid1"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="3dp"
+            android:background="@drawable/gradient_spinner"
+            android:padding="1dp">
+
+        </Spinner>
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_baseline_arrow_downward_24"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_gravity="center">
+
+        </ImageView>
+
+        <Spinner
+            android:id="@+id/spinnerid2"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="3dp"
+            android:gravity="center"
+            android:background="@drawable/gradient_spinner"
+            android:padding="1dp"
+            >
+
+        </Spinner>
+
+    </LinearLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_below="@id/language_selector"
+        android:id="@+id/source_text"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="40dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:hint="Source Text"
+        android:textColorHint="@color/black"
+        android:padding="8dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/idEditSource"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:ems="10"
+            android:importantForAutofill="no"
+            android:inputType="textMultiLine|textImeMultiLine"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:textStyle="bold"
+            tools:ignore="SpeakableTextPresentCheck">
+
+        </com.google.android.material.textfield.TextInputEditText>
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Or"
+        android:textColor="#F44336"
+        android:textSize="20sp"
+        android:layout_below="@id/source_text"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:id="@+id/or_text"
+        android:layout_marginTop="10dp"
+        android:textAlignment="center">
+
+    </TextView>
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/ic_baseline_mic_24"
+        app:tint="@color/yellow"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/or_text"
+        android:id="@+id/idmic"
+        >
+
+    </ImageView>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Translated Text"
+        android:textAlignment="center"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:layout_below="@id/idmic"
+        android:textSize="18sp"
+        android:id="@+id/translatedtext"
+        android:textColor="@color/black"
+        android:textStyle="bold">
+
+    </TextView>
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="15dp"
+        android:text="Translate"
+        android:layout_alignParentBottom="true"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        android:id="@+id/btntranslate">
+
+    </com.google.android.material.button.MaterialButton>
+
+
+
+</RelativeLayout>
